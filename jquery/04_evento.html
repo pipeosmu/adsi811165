@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos jQuery</title>
+</head>
+<body>
+	<h1>Eventos jQuery</h1>
+	<hr>
+
+	<button>Boton</button>
+	<output id="o1"></output>
+	<br>
+	<h3>Eventos de Formulario</h3>
+	<input type="text">
+	<select>
+		<option value="colombia">Colombia</option>
+		<option value="ecuador">Ecuador</option>
+		<option value="venezuela">Venezuela</option>
+	</select>
+    <output id="o2"></output>
+    <br>
+    <h3>Eventos de Documento/Ventana</h3>
+    <a href="javascript:;">Cargar Menu</a>
+    <output id="o3"></output>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+	    $(document).ready(function() {
+	    	$('button').click(function(){
+	    		$('output#o1').text('Usted Presiono El Boton')
+	    	})
+	    	$('button').dblclick(function(){
+	    		$('output#o1').text('Usted Presiono El Boton Dos Veces')
+	    	})
+	    	$('button').mouseenter(function(){
+	    		$('output#o1').text('Usted puso el puntero en el boton')
+	    	})
+	    	$('button').mouseleave(function(){
+	    		$('output#o1').text('Usted saco el puntero del boton')
+	    	})
+	    	$('input').keypress(function(){
+	    		$('output#o2').text('Usted Presiono Una Tecla')
+	    	})
+
+            $('input').keyup(function(){
+	    		$('output#o2').text('Usted Solto Una Tecla')
+	    	})
+	    		$('input').keydown(function(){
+	    		$('output#o2').text('Usted Dejo Presionado La Tecla')
+	    	})
+          	   $('select').change(function(){
+	    		$('output#o2').text('Usted  cambio a la opcion '+$(this).val());
+	    	})
+          	   $('a').click(function(){
+	    		$('output#o3').load('menu.html');
+	    	})
+	    });
+	</script>
+</body>
+</html>S

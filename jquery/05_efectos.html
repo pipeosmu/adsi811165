@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Efectos (hide, show, toggle) jQuery</title>
+	<style>
+	    body {
+	    	background-color: #0a5e71;
+	    	font: 1.2em tahoma;
+	    }
+	    h1 {
+	    	text-align: center;
+	    	color: #fff;
+
+	    	text-shadow: 2px 2px 4px #000;
+	    	-webkit-text-shadow: 2px 2px 4px #000;
+
+	    }
+	    article#texto {
+	    	width: 400px;
+	    	padding: 20px;
+	    	margin: 20px auto;
+	    	background-color: #8ad9eb;
+	    	border: 4px dotted #278da4;
+	    }
+	    article#controles{
+	    	margin: 0px auto;
+	    	width: 250px;
+	    }
+	</style>
+</head>
+<body>
+	<h1>Efectos (hide, show, toggle) jQuery</h1>
+	<hr>
+	<article id="texto">
+		<h1>Lorem Ipsum Dolor Sit Amet</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint delectus dolores quibusdam iure, voluptatum ipsum quis nihil, numquam minima, corporis, ipsam labore inventore et tempore! Rerum, quidem reiciendis repudiandae!
+		</p>
+	</article>
+	<article id="controles">
+	<button id="btnHide">Ocultar</button>
+	<button id="btnShow">Mostrar</button>
+	<button id="btnToggle">Ocultar/Mostrar</button>
+	</article>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+	    $(document).ready(function() {
+	    	$txt = $('#texto');
+	    	//Ocultar-------------------
+	    	$('#controles').on('click', '#btnHide', function(event) {
+	    		event.preventDefault();
+	    		$txt.hide();
+	    	});
+	    	//Mostrar-------------------
+	    	$('#controles').on('click', '#btnShow', function(event) {
+	    		event.preventDefault();
+	    		$txt.show();
+	    	});
+	    	//Ocultar/Mostrar------------
+	    	$('#controles').on('click', '#btnToggle', function(event) {
+	    		event.preventDefault();
+	    		$txt.toggle();
+	    	});
+	    });
+	</script>
+</body>
+</html>

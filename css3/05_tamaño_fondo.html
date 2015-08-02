@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Background Size CSS3</title>
+	<style>
+        section {
+        	background: url(imgs/madara.png) no-repeat;
+        	border: 4px solid #ccc;
+        	height: 400px;
+        	width: 600px;
+        	margin: 20px auto;       
+       }
+	   
+        #box1 {
+        	background-size: 34%;
+        	background-repeat: repeat;
+        }
+
+        #box2 {
+        	background-position: center top;
+        	background-size: 700px;
+        }
+        #box3 {
+        	background-size: conver;
+        }
+        #box4 {
+        	background-size: contain;
+        }
+	</style>
+</head>
+<body>
+     <h1>tamaño de fondo</h1>
+     <hr>
+    <section id="box1"></section>
+    <section id="box2"></section>
+    <section id="box3"></section>
+    <section id="box4"></section>
+    
+
+</body>
+</html>

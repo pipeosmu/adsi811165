@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Degradado lineal (lineal-gradient) CSS3</title>
+	<style>
+	section {
+        margin: 10px auto;
+		width: 600px;
+	  	height: 300px;
+	  	border: 2px dotted #333;
+	}
+	  section#box1 {
+	  	background: -webkit-linear-gradient(orange,navy);
+	  	background:    -moz-linear-gradient(orange,navy);
+	  	background:         linear-gradient(orange,navy);
+
+	  }
+	  section#box2 {
+	  	background: -webkit-linear-gradient(left,#a01408, #275a28);
+	  	background:    -moz-linear-gradient(left,#a01408, #275a28);
+	  	background:         linear-gradient(left,#a01408, #275a28);
+	  }
+	  section#box3 {
+	  	background: -webkit-linear-gradient(right bottom,yellow,black);
+	  	background:    -moz-linear-gradient(right bottom,yellow,black);
+	  	background:         linear-gradient(right bottom,yellow,black);
+	  }
+	  section#box4 {
+	  	background: -webkit-linear-gradient(top,fuchsia,green,blue,yellow,orange,red,purple,gray,white);
+	  	background:    -moz-linear-gradient(top,fuchsia,green,blue,yellow,orange,red,purple,gray,white);
+	  	background:         linear-gradient(top,fuchsia,green,blue,yellow,orange,red,purple,gray,white);
+	  }
+
+
+	</style>
+</head>
+<body>
+<h1>Degradado lineal (lineal-gradient) CSS3</h1>
+<hr>
+	<section id="box1"></section>
+	<section id="box2"></section>
+	<section id="box3"></section>
+	<section id="box4"></section>
+
+</body>
+</html>

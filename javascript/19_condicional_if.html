@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicional (if) JS</title>
+	<style>
+	   html {font-size: 62.5%;}
+	   body {
+	   	font: 1.4rem tahoma;
+	   }
+	   fieldset {
+	   	margin: 50px auto;
+	   	padding: 20px;
+	   	width: 330px;
+	   }
+	</style>
+</head>
+<body>
+	<h1>Condicional (if) JS</h1>
+	<hr>
+	<fieldset>
+		<legend>
+			<h4>Verificador Ejercito de Colombia</h4>
+		</legend>
+		<input type="number" id="edad" placeholder="Ingrese su  edad">
+		<select name="" id="genero">
+			<option value="M">Masculino</option>
+			<option value="F">Femenino</option>
+		</select>
+		<input type="button" onclick="verificar();" value="verificar">
+	</fieldset>
+	<script>
+	 function verificar(){
+	 	var edad = document.getElementById('edad').value;
+	 	var genero = document.getElementById('genero').value;
+
+	 	if (edad >= 18 && genero == "M") {
+             alert("Bienvenido al Ejercito de Colombia \nDebe prestar Servicio Militar Obligarorio.");
+             	
+	 	}
+	 		 	if (edad < 18) {
+             alert("Usted es menor de Edad \nNo puede prestar Servicio Militar");
+	 	}
+	 		 	if (genero == "F") {
+             alert("Usted es Mujer \nNo puede prestar Servivio Militar.");
+	 	}
+
+	 }
+
+	</script>
+</body>
+</html>

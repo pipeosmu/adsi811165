@@ -1,0 +1,31 @@
+body {
+	font: 1.2em sans-serif;
+}
+h3 {
+	background:-webkit-linear-gradient(top,#FFFFFF,#000000);
+    border: 10px solid #000000;
+    color: #FFFFFF;
+    font-size: 4em;
+    border-radius: 110px;
+    text-shadow:0px 0px 10px #000;
+    line-height: 200px;
+    position: relative;
+    text-align: center;
+    height: 200px;
+	width: 200px;
+}
+h3:hover {
+	cursor:pointer;
+	-webkit-animation:animAdsi 2s ease-in-out;
+}
+@-webkit-keyframes animAdsi {
+	0%{
+		-webkit-transform: scale(1) rotate(0deg);
+	}
+	50% {
+		-webkit-transform:scale(0.8) rotate(360deg);
+	}
+	100%{
+		-webkit-transform: scale(1) rotate(0deg);
+	}
+}

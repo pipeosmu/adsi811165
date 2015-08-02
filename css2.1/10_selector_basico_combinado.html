@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selector Basico (Combinado)</title>
+	<style>
+	   * {
+        font: 18px sans-serif;
+	   }
+
+	   fieldset {
+	   	background-color: #00FF40;
+	   	border: 2px solid #af841f;
+	   	margin: 20px auto;
+	   	padding: 20px;
+	   	width: 600px;
+	   }
+	   fieldset legend h1{
+	   	background-color: #00FF40;
+	   	border-top: 2px solid #af841f;
+	   	padding: 10px 20px;
+	   }
+	   form#frmingreso input.campo {
+	   	    background-color: #fff;
+	   		border-top: 2px solid #af841f;
+	   		display: block;
+	   		margin: 10px 0px;
+	   		padding: 10px;
+	   		width: 300px;
+	   }
+	   form#frmingreso input.campo:focus {
+	   	background-color: #FF0000;
+	   	color: #fff;
+
+	   }
+	   form#frmingreso input#boton {
+	   	background-color: #FFFFFF;
+	   	color: #000000;
+	   	display: block;
+	   	padding: 10px;
+	   	width: 320px;
+	   }
+	   form#frmingreso input#boton:hover {
+	   	background-color: #FF0000;
+	   }
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend><h1>Selector Basico (Combinado)</h1></legend>
+	<form id="frmingreso" action="" method="post">
+		<input class="campo" type="text" placeholder="Ingrese su Nombre">
+		<input class="campo" type="text" placeholder="Ingrese su Apellido">
+		<input id="boton" type="submit" value="Ingresar">
+    </form>
+	</fieldset>
+</body>
+</html>

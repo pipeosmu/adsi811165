@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos (sobre etiquetas) JS</title>
+	<style>
+	    h1#texto {
+	    	background-color: red;
+	    	color:#fff;
+	    	width: 200px;
+	    	height: 150px;
+	    	line-height: 5em;
+	    	padding: 20px;
+	    	text-align: center;
+	    	width: 200px;
+
+	    }
+	</style>
+</head>
+<body id="cuerpo">
+	<h1>Eventos (sobre etiquetas) JS</h1>
+	<hr>
+	<input type="text" id="campo">
+	
+	<button id="limpiar">Limpiar</button>
+	<output id="salida"></output>
+
+	<h1 id="texto">OFF</h1>
+
+	<script>
+	var cuerpo = document.getElementById('cuerpo');
+	var campo = document.getElementById('campo');
+	var texto = document.getElementById('texto');
+	var limpiar = document.getElementById('limpiar');
+	var salida;
+
+	campo.onkeyup = function(){
+		 campo = document.getElementById('campo').value;
+	     salida = document.getElementById('salida');
+
+		salida.value = campo+" : "+campo.length+" caracteres.";
+	}
+	limpiar.onclick = function(){
+        document.getElementById('campo').value = "";
+        salida.innerHTML = "";
+	}
+	cuerpo.onload = function(){
+		alert("Bienvenidos\nPagina de eventos JS")
+	}
+	texto.onmouseover = function(){
+		texto = document.getElementById('texto');
+		texto.innerHTML = "ON";
+		texto.style.backgroundColor = 'green';
+	}
+		texto.onmouseout = function(){
+		texto = document.getElementById('texto');
+		texto.innerHTML = "OFF";
+		texto.style.backgroundColor = 'red';
+	}
+	</script>
+
+</body>
+</html>

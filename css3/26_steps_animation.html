@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reloj Analogo</title>
+	<style>
+	   section#reloj {
+	   	background:url(imgs/reloj.gif);
+	   	background-size: cover;
+
+	   	margin: 20px auto;
+	   	width: 400px;
+	   	height: 400px;
+	   	border-radius:210px;
+	   	position: relative;
+	   }
+	   article#segundos {
+	   	background-color: #e45341;
+	   	width: 34%;
+	   	height: 4px;
+	   	position: absolute;
+	   	top: 50%;
+	   	left: 16%;
+
+	   -webkit-transform-origin:100% 50%;
+	   -webkit-animation:rotarSegundos 60s steps(60) infinite;
+
+	   }
+	   @-webkit-keyframes rotarSegundos {
+	   	0% {-webkit-transform:rotate(90deg);}
+	   	100% {-webkit-transform:rotate(450deg);}
+
+	   }
+	}
+	
+	</style>
+</head>
+<body>
+	<section id="reloj">
+		<article id="segundos"></article>
+		<article id="min"></article>
+
+	</section>
+</body>
+</html>

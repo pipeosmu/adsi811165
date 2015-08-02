@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos Vectores JS</title>
+</head>
+<body>
+	<h1>Metodos Vectores JS</h1>
+	<hr>
+	<h3 id="mostrar"></h3>
+
+	<script>
+	var mostrar = document.getElementById('mostrar');
+	var bicicletas = ['Santa Cruz','Yeti','Pivot','Trek','Cannondale','Scott'];
+
+	mostrar.innerHTML = "valueOf: "+bicicletas.valueOf()+"<br><hr>";
+	mostrar.innerHTML += "toString: "+bicicletas.toString()+"<br><hr>";
+	mostrar.innerHTML += "join: "+bicicletas.join('/')+"<br><hr>";
+	mostrar.innerHTML += "sort: "+bicicletas.sort()+"<br><hr>";
+	mostrar.innerHTML += "reverse: "+bicicletas.reverse()+"<br><hr>";
+
+	</script>
+</body>
+</html>

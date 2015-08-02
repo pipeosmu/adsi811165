@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Efectos (fadeIn, FadeOut, fadeTo, fadeToggle) jQuery</title>
+	<style>
+	    body {
+	    	background-color: #0a5e71;
+	    	font: 1.2em tahoma;
+	    }
+	    h1 {
+	    	text-align: center;
+	    	color: #fff;
+
+	    	text-shadow: 2px 2px 4px #000;
+	    	-webkit-text-shadow: 2px 2px 4px #000;
+
+	    }
+	    article#texto {
+	    	width: 400px;
+	    	padding: 20px;
+	    	margin: 20px auto;
+	    	background-color: #8ad9eb;
+	    	border: 4px dotted #278da4;
+	    }
+	    article#controles{
+	    	margin: 0px auto;
+	    	width: 490px;
+	    }
+	    input {
+	    	width: 40px;
+	    }
+	</style>
+</head>
+<body>
+	<h1>Efectos (fadeIn, FadeOut, fadeTo, fadeToggle) jQuery</h1>
+	<hr>
+	<article id="texto">
+		<h1>Lorem Ipsum Dolor Sit Amet</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint delectus dolores quibusdam iure, voluptatum ipsum quis nihil, numquam minima, corporis, ipsam labore inventore et tempore! Rerum, quidem reiciendis repudiandae!
+		</p>
+	</article>
+	<article id="controles">
+	<button id="btnFadeIn">Aparecer</button>
+	<button id="btnFadeOut">Desvanecer</button>
+	<button id="btnFadeToggle">Aparecer/Desvanecer</button>
+	<input type="number" min="0" max="10">
+	<button id="btnFadeTo">Desvanece Valor</button>
+
+	</article>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+	    $(document).ready(function() {
+	    	$txt = $('#texto');
+	    	//Aparecer-------------------
+	    	$('#controles').on('click', '#btnFadeIn', function(event) {
+	    		event.preventDefault();
+	    		$txt.fadeIn('slow');
+	    	});
+	    	//Desvanecer-------------------
+	    	$('#controles').on('click', '#btnFadeOut', function(event) {
+	    		event.preventDefault();
+	    		$txt.fadeOut('fast');
+	    	});
+	    	//Aparecer/Desvanecer------------
+	    	$('#controles').on('click', '#btnFadeToggle', function(event) {
+	    		event.preventDefault();
+	    		$txt.fadeToggle(2000);
+	    	});
+	    	//Desvanecer Hasta------------------
+	    	$('#controles').on('click', '#btnFadeTo', function(event) {
+	    		event.preventDefault();
+	    		$num = parseFloat($('input').val());
+	    		$txt.fadeTo(2000, $num);
+	    	});
+	    });
+	</script>
+</body>
+</html>

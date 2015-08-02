@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicional (switch) JS</title>
+</head>
+<body>
+	<h1>Condicional (switch) JS</h1>
+	<hr>
+	<fieldset>
+		<legend>Personajes Dragon Ball Z</legend>
+		<select id="personaje">
+			<option value="0">Seleccione...</option>
+			<option value="1">Vegeta</option>
+			<option value="2">Picoro</option>
+			<option value="3">Majin Boo</option>
+		</select>
+	</fieldset>
+	<script>
+	    var personaje = document.getElementById('personaje');
+	    var cuerpo = document.querySelector('body');
+
+	    cuerpo.style.backgroundRepeat = 'no-repeat';
+	    cuerpo.style.backgroundPosition = 'center center';
+	    cuerpo.style.backgroundSize = 'contain';
+	    cuerpo.style.height   = '600px'
+
+	    personaje.onchange = function(){
+
+	    	switch(parseInt(this.value)){
+	    		case 0:
+	    		cuerpo.style.backgroundImage = 'none';
+	    		break;
+
+	    		case 1:
+	    		cuerpo.style.backgroundImage = 'url(imgs/vege.png)';
+	    		break;
+
+	    		case 2:
+	    		cuerpo.style.backgroundImage = 'url(imgs/pico.png)';
+	    		break;
+
+	    		default:
+	    		cuerpo.style.backgroundImage = 'url(imgs/majin.png)';
+	    		break;
+	    	}
+	    }
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intervalos de tiempo (setInterval)</title>
+	<style>
+	    h2 {
+	    	color: red;
+	    	font-family: sans-serif;
+	    	
+	    }
+	</style>
+</head>
+<body>
+	<h1>Intervalos de tiempo (setInterval) JS</h1>
+	<hr>
+	<section id="crono">
+	<br>
+		<button id="init">Iniciar</button>
+		<button id="stop">Detener</button>
+		<button id="reset">Reiniciar</button>
+		<br>
+		<h2 id="tiempo"></h2>
+	</section>
+	<script>
+       var tiempo = document.getElementById('tiempo');
+       var init = document.getElementById('init');
+       var stop = document.getElementById('stop');
+       var reset = document.getElementById('reset');
+
+       var seti = null;
+       var cont = 0;
+
+       init.onclick = function(){
+       	seti = setInterval(initTimer,1000)
+       }
+       stop.onclick = function(){
+       	clearInterval(seti);
+       }
+       reset.onclick = function(){
+       	cont = 0;
+       	tiempo.innerHTML = '0 Segundos';
+       	clearInterval(seti);
+       	seti = setInterval(initTimer,1000);
+       }
+       function initTimer() {
+       	cont++;
+       	tiempo.innerHTML = cont+' Segundos';
+       }
+	</script>
+</body>
+</html>

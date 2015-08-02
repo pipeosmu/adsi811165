@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parte sobrante dentro de un elemento (overflow) CSS</title>
+	<style>
+        html {font-size: 62.5%;}
+        body {font:1.6rem sans-serif;}
+
+        article {
+        	border: 2px solid #999;
+        	width: 200px;
+        	height: 180px;
+        	display: inline-block;
+        	margin: 20px ;
+        	padding: 4px;
+        	vertical-align: top;
+        }
+        article h1 {
+        	font-size: 2rem;
+        	background-color: #ddd;
+
+        }
+        .visible {
+        	overflow: visible;
+        }
+        .oculto {
+            overflow: hidden;
+        }
+        .desplazar {
+        	overflow: scroll;
+        }
+ 	</style>
+</head>
+<body>
+	<h1>Parte sobrante dentro de un elemento (overflow) CSS</h1>
+	<hr>
+	<article class="visible">
+		<h1>Overflow: visible</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit commodi dicta quia nemo, velit. Veritatis obcaecati optio cum cupiditate illo, consequatur, aut distinctio nihil laudantium suscipit perferendis nostrum ipsum quisquam.
+	</article>
+	<article class="oculto">
+		<h1>Overflow: hidden</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit commodi dicta quia nemo, velit. Veritatis obcaecati optio cum cupiditate illo, consequatur, aut distinctio nihil laudantium suscipit perferendis nostrum ipsum quisquam.
+	</article>
+	<article class="desplazar">
+		<h1>Overflow: scroll</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit commodi dicta quia nemo, velit. Veritatis obcaecati optio cum cupiditate illo, consequatur, aut distinctio nihil laudantium suscipit perferendis nostrum ipsum quisquam.
+	</article>
+</body>
+</html>

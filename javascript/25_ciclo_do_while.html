@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ciclo (while) JS</title>
+		<style>
+	   html { font-size: 62.5%; }
+	   body {font: 1.6rem tahoma; }
+	   div.box {
+	   	display: inline-block;
+	   	border: 4px solid #681659;
+	   	background-color: #a7679e;
+	   	color: #fff;
+	   	font-size: 3rem;
+	   	line-height: 10rem;
+	   	height: 100px;
+	   	width: 100px;
+	   	position: relative;
+	   	margin-top: 20px;
+	   	text-align: center;
+	   	margin: 20px 20px 0px 0px;
+	   }
+	</style>
+</head>
+<body>
+	<h1>ciclo (while) JS</h1>
+	<hr>
+	<input type="number" id="rep" min="0" max="100">
+	<button id="ingre">Ingresar</button>
+</body>
+<section id="cont"></section>
+
+ <script>
+    var ingre = document.getElementById('ingre');
+    var cont = document.getElementById('cont');
+
+
+    ingre.onclick = function(){
+       var num = Number(document.getElementById('rep').value);
+    	 var i = 1;
+    	 var fact = 1;
+        if(num == 0){
+        	alert("Por favor ingrese un numero");
+        }
+        	else {
+
+            do {
+       	    fact *= i;
+       	     cont.innerHTML = "<div class='box'>"+num+"</div>";
+            i++;
+        }
+       	   while(i <= num);
+       	      
+       	   }
+
+       }
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto</title>
+	<style>
+		section#caja {
+			height: 600px;
+			width: 800px;
+			border: 2px solid green;
+			margin: 0px auto;
+			background: url(campo.jpg) center;
+			margin: 50px auto;
+		}
+		img#ball {
+			position: relative;
+			top: 260px;
+			left: 360px;
+			background-position: center;
+			-webkit-transition: 0.1s;
+		}
+	</style>
+</head>
+<body id="cuerpo">
+	<section id="caja">
+		<img id="ball" src="balon.png" alt="">
+	</section>
+	<script>
+	var cuerpo  = document.getElementById('cuerpo');
+	var balon   = document.getElementById('ball');
+	var pos1    = 260;
+	var pos2    = 360;
+
+
+	cuerpo.onkeyup = function(e) {
+	var tecla= e.keyCode;
+	if (tecla == 37) {
+                if (pos2 > 0) {
+                  pos2 -= 40;
+                  balon.style.left = pos2+'px';
+                }
+            }
+            if (tecla == 38) {
+              if (pos1 > 0) {
+                pos1 -= 40;
+                balon.style.top = pos1+'px';
+              }
+            }
+            if (tecla == 39) {
+              if (pos2 < 750) {
+                pos2 += 40;
+                balon.style.left = pos2+'px';
+              }
+            }
+            if (tecla == 40) {
+              if (pos1 < 530) {
+                pos1 += 40;
+                balon.style.top = pos1+'px';
+              }
+            }
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	div#car {
+		background:url(imgs/Shamble-the-car-red.png);
+		width: 300px;
+		height: 300px;
+		position: relative;
+		background-size: 100%;
+		margin-top: 240px;
+
+	}
+        body {
+                background: url(imgs/fondo.jpg) center center;
+                background-size: cover;
+        }
+
+</style>
+</head>
+<body>
+	<div id="car"></div>
+        <br>    
+        <button id="arra">Acelerar</button>
+        <button id="fre" onclick="frenar();">Frenar</button>
+	<script>
+        var carro = {
+                nombre: "fiat",
+                color: "Rojo",
+                modelo: "2005",
+                foto : "imgs/Shamble-the-car-red.png"
+        }
+        var poscar = 0;
+        var car = document.getElementById('car');
+        var dircar = 'right';
+        var playcar = document.getElementById('arra');
+        var stopcar = document.getElementById('fre');
+
+
+        playcar.onclick = function(){
+                  var tiempo = setInterval(animateCar, 100);
+             stopcar.onclick = function(){
+                clearInterval(tiempo);
+             }
+        }
+
+
+
+        function animateCar() {
+        	if (poscar == 1300) dircar = 'left';
+        	if (poscar == 0) dircar = 'right';
+
+        	
+        	if (dircar == 'right') {
+        		poscar += 20;
+        	car.style.webkitTransform = 'rotateY(0deg)';
+        		car.style.left = poscar+'px';
+        	} else {
+        		poscar -= 20;
+        		car.style.webkitTransform = 'rotateY(180deg)';
+        		car.style.left = poscar+'px';
+        	}
+        	
+        }
+
+	</script>
+</body>
+</html>

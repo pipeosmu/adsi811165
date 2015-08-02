@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicional (else) JS</title>
+</head>
+<body>
+	<h1>Condicional (else) JS</h1>
+	<fieldset>
+		<legend>Nivel de Vida</legend>
+		0<input type="range" id="vida" min="0" max="100">
+		<output id="salud">100</output>
+		<button id="calcular">Calcular</button>
+	</fieldset>
+	<script>
+	var vida = document.getElementById('vida');
+	var salud = document.getElementById('salud');
+	var calcular = document.getElementById('calcular');
+
+
+    vida.onchange = function() {
+    	salud.innerHTML = this.value;
+    }	
+    calcular.onclick = function(){
+    	if (salud.value < 1) {
+    		alert('Esta Muerto!');
+    	}else{
+    		alert('Aun Sigue Con Vida!')
+    	}
+    }
+	</script>
+</body>
+</html>

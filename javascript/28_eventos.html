@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos (sobre etiquetas) JS</title>
+	<style>
+	    h1#texto {
+	    	background-color: red;
+	    	color:#fff;
+	    	width: 200px;
+	    	height: 150px;
+	    	line-height: 5em;
+	    	padding: 20px;
+	    	text-align: center;
+	    	width: 200px;
+
+	    }
+	</style>
+</head>
+<body onload="mensajeBienvenida();">
+	<h1>Eventos (sobre etiquetas) JS</h1>
+	<hr>
+	<input type="text" id="campo" onkeyup="mostrarCadena();">
+	
+	<button onclick="limpiarCampo();">Limpiar</button>
+	<output id="salida"></output>
+
+	<h1 id="texto" onmouseover="cambiarOn();" onmouseout="cambiarOff();">OFF</h1>
+
+	<script>
+	var campo;
+	var salida;
+	var texto;
+	function mostrarCadena(){
+		 campo = document.getElementById('campo').value;
+	     salida = document.getElementById('salida');
+
+		salida.value = campo+" : "+campo.length+" caracteres.";
+	}
+	function limpiarCampo(){
+        document.getElementById('campo').value = "";
+        salida.innerHTML = "";
+	}
+	function mensajeBienvenida(){
+		alert("Bienvenidos\nPagina de eventos JS")
+	}
+	function cambiarOn(){
+		texto = document.getElementById('texto');
+		texto.innerHTML = "ON";
+		texto.style.backgroundColor = 'green';
+	}
+		function cambiarOff(){
+		texto = document.getElementById('texto');
+		texto.innerHTML = "OFF";
+		texto.style.backgroundColor = 'red';
+	}
+	</script>
+
+</body>
+</html>

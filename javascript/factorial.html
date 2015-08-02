@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Factorial</title>
+</head>
+<body>
+<input type="number" name="num" id="num">
+<br>
+<button id="cal">Calcular</button>
+<br>
+<h3 id="mostrar"></h3>
+	<script>
+
+     cal.onclick = function(){
+
+     var cal = document.getElementById('cal');
+      var numero = Number(document.getElementById('num').value);
+       var resultado = 1;
+      	for (var i = 1 ;i <= numero; i++) {
+
+         resultado *= i;
+        
+      	}
+      	 mostrar.innerHTML = resultado;
+      }
+	</script>
+</body>
+</html>

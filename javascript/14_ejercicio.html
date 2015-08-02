@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operaciones Actividad</title>
+	<style>
+	  fieldset{
+	  	width: 200px;
+	  	margin: 20px auto;
+	  }
+	</style>
+</head>
+<body>
+<fieldset>
+<legend>Operadores</legend>
+	Numero 1 <br><input type="number" id="num1"><br>
+	Numero 2 <br><input type="number" id="num2"><br><br>
+	<select name="opc" id="oper">
+		<option value="suma" >Suma</option>
+		<option value="resta" >Resta</option>
+		<option value="producto" >Producto</option>
+		<option value="division" >Division</option>
+		<option value="exponenciacion" >Exponenciacion</option>	
+	</select><br><br>
+    <button id="cal">Calcular</button>
+    <br><br>
+    </fieldset>
+    <fieldset>
+    <legend>Resultado</legend>
+    <h3 id="res"></h3>
+    </fieldset>
+	<script>
+	var res = document.getElementById('res');
+	var cal = document.getElementById('cal');
+
+	cal.onclick = function(){
+	 var num1 = document.getElementById('num1').value;
+	 var num2 = document.getElementById('num2').value;
+	var op = document.getElementById('oper').value;
+
+
+       if (op == 'suma') {
+        	res.innerHTML = "el resultado de la suma es: "+suma(num1, num2);
+        function suma(num1, num2){
+        	return (parseInt(num1))+(parseInt(num2));
+}
+       }
+       else if (op == 'resta') {
+        	res.innerHTML = "el resultado de la resta es: "+resta(num1, num2);
+                         function resta(num1, num2){
+        	return (parseInt(num1))-(parseInt(num2));
+}
+         
+        }
+             else if (op == 'producto') {        
+        	res.innerHTML = "el resultado del producto es: "+producto(num1, num2);
+        	    function producto(num1, num2){
+        	return (parseInt(num1))*(parseInt(num2));
+}
+
+         
+        }
+              else if (op == 'division') {
+        	res.innerHTML = "el resultado de la division es: "+division(num1, num2);
+
+                         function division(num1, num2){
+        	return (parseInt(num1))/(parseInt(num2));
+}
+        }
+             else if (op == 'exponenciacion') {
+        	res.innerHTML = "la potencia es de: "+exponenciacion(num1, num2);
+                function exponenciacion(num1, num2){
+        	return Math.pow((parseInt(num1)), (parseInt(num2)));
+}
+         
+        }
+        }
+
+
+	</script>
+</body>
+</html>

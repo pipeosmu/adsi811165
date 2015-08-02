@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>responsive</title>
+	<style>
+	body {
+		background:url(imgs/des.jpg) no-repeat ;
+		background-size: cover;
+	}
+	   div#logo {
+	   	background: url(imgs/logolisto.png)no-repeat center center;
+	   	background-size: contain;
+        margin: 0px auto;
+	   	width: 1000px;
+	   	height: 500px;
+	   	-webkit-transition: all 0.2s;
+	   }	
+	   section#padre {
+	   	margin: 10px auto;
+	   	width: 1000px;
+	   	-webkit-transition: all 0.2s;
+	   }
+	   article {
+	   	border-radius: 200px;
+	   	display: inline-block;
+	   	width: 280px;
+	   	height: 280px;
+	   	margin:20px;
+	   	-webkit-box-shadow:6px 6px 12px  black;
+	   	   -moz-box-shadow:6px 6px 12px  black;
+                box-shadow:6px 6px 12px  black;
+	   }
+	   article.uno {
+	   	background: url(imgs/cr7listo.png) center center;
+	   	background-size: cover;
+	   }
+	   article.dos {
+	   	background: url(imgs/balelisto.png) center center;
+	   	background-size: cover;
+	   }
+	   article.tres {
+	   	background: url(imgs/casillaslisto.png) center center;
+	   	background-size: cover;
+	   }
+	   article.cuatro {
+	   	background: url(imgs/iscolisto.png) center center;
+	   	background-size: cover;
+	   }
+	   article.cinco {
+	   	background: url(imgs/jameslisto.png) center center;
+	   	background-size: cover;
+	   }
+	   article.seis {
+	   	background: url(imgs/kroslisto.png) center center;
+	   	background-size: cover;
+	   }
+
+	   h4 {
+	   	text-align: center;
+	   	font-family: sans-serif;
+	   	margin-top: 240px;
+	   	padding: 10px;
+	   	background-color: rgba(175,175,175,0.6);
+	   	border: 2px solid black;
+
+
+	   	-webkit-text-shadow:2px 2px 10px  black;
+	   	   -moz-text-shadow:2px 2px 10px  black;
+                text-shadow:2px 2px 10px  black;
+	   }
+	   @media screen and (max-width:1024px){
+	   	section#padre {
+	   		width: 750px;
+	   	}
+	   	article {
+	   		width: 200px;
+	   		height: 200px;
+	   	}
+	   	h4{
+	   		margin-top: 160px;
+	   	}
+	   	div#logo {
+	   		width: 750px;
+	   	}
+	   }
+	   	   @media screen and (max-width:800px){
+
+	   	div#logo {
+	   		width: 640px;
+	   		background: url(imgs/logo2listo.png)no-repeat center center;
+	   		background-size: contain;
+	   	}
+	   	section#padre {
+	   		width: 640px;
+	   	}
+	   	   	article {
+	   		width: 270px;
+	   		height: 270px;
+	   	}
+	   	h4{
+	   		margin-top: 230px;
+	   	}
+	   }
+	   	   	   @media screen and (max-width:640px){
+
+	   	div#logo {
+	   		width: 600px;
+	   		background: url(imgs/logo2listo.png)no-repeat center center;
+	   		background-size: contain;
+	   	}
+	   	section#padre {
+	   		width: 600px;
+	   	}
+	   	   	article {
+	   		width: 250px;
+	   		height: 250px;
+	   	}
+	   	h4{
+	   		margin-top: 210px;
+	   	}
+	   }
+	   	     	   	   @media screen and (max-width:580px){
+
+	   	div#logo {
+	   		width: 340px;
+	   		background: url(imgs/logo.png)no-repeat center center;
+	   		background-size: contain;
+	   	}
+	   	section#padre {
+	   		width: 340px;
+	   	}
+	   	   	article {
+	   		width: 290px;
+	   		height: 290px;
+	   	}
+	   	h4{
+	   		margin-top: 230px;
+	   	}
+	   }
+	     	   	   @media screen and (max-width:420px){
+
+	   	div#logo {
+	   		width: 340px;
+	   		background: url(imgs/logo.png)no-repeat center center;
+	   		background-size: contain;
+	   	}
+	   	section#padre {
+	   		width: 340px;
+	   	}
+	   	   	article {
+	   		width: 290px;
+	   		height: 290px;
+	   	}
+	   	h4{
+	   		margin-top: 230px;
+	   	}
+	   }
+	   
+
+	</style>
+</head>
+<body>
+	<div id="logo">
+	</div>
+	<section id="padre">
+		<article class="uno"><h4>NOMBRE: Cristiano Ronaldo Dos Santos <br>EDAD: 30 Años <br>POSICION: Extremo</h4></article>
+		<article class="dos"><h4>NOMBRE: Gareth Frank Bale <br>EDAD: 25 Años <br>POSICION: Extremo Derecho</h4></article>
+		<article class="tres"><h4>NOMBRE: Iker Casillas Fernandez <br>EDAD: 33 Años <br>POSICION: Guardameta</h4></article>
+		<article class="cuatro"><h4>NOMBRE: Francisco Román Alarcón <br>EDAD: 23 Años <br>POSICION: Media punta</h4></article>
+		<article class="cinco"><h4>NOMBRE: James David Rodríguez <br>EDAD: 23 Años <br>POSICION: Centrocampista</h4></article>
+		<article class="seis"><h4>NOMBRE: Toni Kroos  <br>EDAD: 25 Años <br>POSICION: Centrocampista</h4></article>
+	</section>
+
+</body>
+</html>

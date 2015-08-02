@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos Fechas (set) JS</title>
+</head>
+<body>
+	<h1>Metodos Fechas (set) JS</h1>
+	<hr>
+	<strong>Dia</strong>
+	<input type="text" id="dia">
+
+	<strong>Mes</strong>
+	<input type="text" id="mes">
+
+	<strong>Año</strong>
+	<input type="text" id="ano">
+	<br>
+    <br>
+	<button id="setFecha">Asignar Fecha</button>
+	<output id="getFecha"></output>
+
+
+</body>
+<script>
+	var setFecha = document.getElementById('setFecha');
+	var getFecha = document.getElementById('getfecha');
+	var nfecha = new Date;
+
+	setFecha.onclick = function(){
+		var dia = document.getElementById('dia').value;
+		var mes = document.getElementById('mes').value;
+		var ano = document.getElementById('ano').value;
+
+		nfecha.setDate(dia);
+		nfecha.setMonth(mes);
+		nfecha.setFullYear(ano);
+
+		getFecha.innerHTML = nfecha;
+
+	}
+
+</script>
+</html>

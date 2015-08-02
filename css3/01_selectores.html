@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectores (css3)</title>
+	<style>
+
+	    p~ul {
+	    	background-color: red;
+	    }
+
+	    a[href^="https"] {
+	    	background-color: #E563E0;
+	    }
+
+	    a[href$=".pdf"] {
+	    	background-color: #FA1CC3;
+	    }
+
+	    a[href*="google"] {
+	    	background-color: #349199;
+	    }
+
+	    header.primera p:first-of-type {
+	    	background-color: #13F30E;
+	    	color: white;
+	    }
+
+       header.ultima p:last-of-type {
+	    	background-color: #13F30E;
+	    	color: white;
+	    }
+	   p:only-of-type {
+	   	background-color: #F80D0D;
+	   }
+
+	  section.unico p:only-child {
+	   	background-color: #F9CE07;
+	   }
+	   section.segundo p:nth-child(2) {
+	   	background-color: #59FFB3;
+	   }
+	   section.atras p:nth-last-child(2){
+	   	background-color: #0D0DDA;
+	   }
+	   section.hijo p:nth-of-type(2) {
+	   	background-color: #888484;
+	   }
+	   section.otro p:nth-last-of-type(3) {
+	   	background-color: #7214F1;
+	   }
+	   section.ultimo p:last-child {
+           background-color: #10D3EA;
+	   }
+	   :root {
+	   	background-color: #CFE1DE;
+	   }
+	   section.empty p:empty {
+	   	background-color: #FF0196;
+	   	height: 10px;
+	   	border: 2px solid black;
+	   }
+
+	  #noticias:target {
+	   	background-color: #001EFF;
+	   }
+      #contactos:target {
+      	background-color: #F9F111;
+      }
+      #ayuda:target {
+      	background-color: #1CF0F3;
+      }
+      input:enabled {
+      	background-color: #FF0404;
+      }
+      input:disabled {
+      	background-color: #01F807;
+      }
+      input.perros:checked {
+      	background-color: navy;
+      	border: 1px solid red;
+      	height: 20px;
+      	width: 20px;
+      	
+      	-webkit-appearance: none;
+      }
+      input.gatos:checked {
+      	background-color: navy;
+      	border: 1px solid red;
+      	height: 20px;
+      	width: 20px;
+      	
+      	-webkit-appearance: none;
+      }
+      input.peces:checked {
+      	background-color: navy;
+      	border: 1px solid red;
+      	height: 20px;
+      	width: 20px;
+      
+      	-webkit-appearance: none;
+      }
+      fieldset.fin input{
+		width: 20px;
+		height: 20px;
+		border: 1px solid black;
+		
+		-webkit-appearance: none;
+      }
+     fieldset.no:not(p) {
+      	background-color: #02EDC4;
+      }
+      p.uno::selection {
+      	background-color: yellow;
+      }
+      p.dos::selection {
+      	background-color: blue;
+      }
+      p.tres::selection {
+      	background-color: red;
+      }
+	</style>
+</head>
+<body>
+	<h1>Selectores (css3)</h1>
+	<hr>
+	<fieldset>
+		<legend><h2>p~ul</h2></legend>
+		<p>
+			<ul>
+				<li>Elemento1</li>
+				<li>Elemento2</li>
+			</ul>
+		</p>
+		<ul>
+				<li>Elemento3</li>
+				<li>Elemento4</li>
+			</ul>
+	</fieldset>
+
+<fieldset id="noticias">
+		<legend><h2>NOTICIAS</h2></legend>
+			
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore quos architecto quas veniam natus possimus officiis nulla, totam id, error, nostrum omnis quo molestiae, labore? Aliquam, aliquid, architecto! Et quo ex, suscipit in? Alias eos veritatis perspiciatis sunt molestias doloremque aut id eligendi aperiam quaerat officia sed possimus, omnis dolores nulla similique rerum autem incidunt tempora in at totam cum reprehenderit laborum. Similique tenetur dolore quam beatae earum, nihil, accusantium maxime suscipit hic obcaecati deleniti vel explicabo doloremque recusandae natus eius. Expedita asperiores eveniet nam ab perspiciatis, cumque reiciendis ea consectetur deserunt impedit illo magnam et dicta, quis atque!
+			
+	</fieldset>
+
+	<fieldset id="contactos">
+		<legend><h2>CONTACTOS</h2></legend>
+			
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore quos architecto quas veniam natus possimus officiis nulla, totam id, error, nostrum omnis quo molestiae, labore? Aliquam, aliquid, architecto! Et quo ex, suscipit in? Alias eos veritatis perspiciatis sunt molestias doloremque aut id eligendi aperiam quaerat officia sed possimus, omnis dolores nulla similique rerum autem incidunt tempora in at totam cum reprehenderit laborum. Similique tenetur dolore quam beatae earum, nihil, accusantium maxime suscipit hic obcaecati deleniti vel explicabo doloremque recusandae natus eius. Expedita asperiores eveniet nam ab perspiciatis, cumque reiciendis ea consectetur deserunt impedit illo magnam et dicta, quis atque!
+			
+	</fieldset>
+	<fieldset id="ayuda">
+		<legend><h2>AYUDA</h2></legend>
+			
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore quos architecto quas veniam natus possimus officiis nulla, totam id, error, nostrum omnis quo molestiae, labore? Aliquam, aliquid, architecto! Et quo ex, suscipit in? Alias eos veritatis perspiciatis sunt molestias doloremque aut id eligendi aperiam quaerat officia sed possimus, omnis dolores nulla similique rerum autem incidunt tempora in at totam cum reprehenderit laborum. Similique tenetur dolore quam beatae earum, nihil, accusantium maxime suscipit hic obcaecati deleniti vel explicabo doloremque recusandae natus eius. Expedita asperiores eveniet nam ab perspiciatis, cumque reiciendis ea consectetur deserunt impedit illo magnam et dicta, quis atque!
+			
+	</fieldset>
+
+
+	<fieldset>
+		<legend><h2>a[src^="https"]</h2></legend>
+			<a href="http://google.com">Ir a google</a> |
+			<a href="https://senasofiaplus.sena.edu.co">Ir a sofia</a> |
+			<a href="http://yahoo.com">Ir a yahoo</a>
+	</fieldset>
+
+
+	<fieldset>
+		<legend><h2>a[src$=".pdf"]</h2></legend>
+          <a href="documentos/css2.1.pdf">Css2.1</a> |
+		  <a href="documentos/adop.docx">Adopcion</a>
+	</fieldset>
+
+	<fieldset>
+		<legend><h2>a[src*="google"]</h2></legend>
+          <a href="http://google.com">Ir a google</a> |
+		  <a href="http://yahoo.com">Adopcion</a>
+	</fieldset>
+
+	<fieldset>
+		<legend><h2>p:first-of-type</h2></legend>
+          <header class="primera">
+          	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum blanditiis, veniam maiores, error temporibus, eum consequuntur repellat in natus mollitia accusamus ab maxime officiis et aliquam molestias voluptatibus libero ad.
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, culpa, quo commodi corporis explicabo repudiandae optio non veritatis quibusdam expedita magnam officiis maiores. Soluta ullam, enim officia voluptas beatae illo!
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </header>
+	</fieldset>
+
+	<fieldset>
+		<legend><h2>p:last-of-type</h2></legend>
+          <header class="ultima">
+          	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum blanditiis, veniam maiores, error temporibus, eum consequuntur repellat in natus mollitia accusamus ab maxime officiis et aliquam molestias voluptatibus libero ad.
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, culpa, quo commodi corporis explicabo repudiandae optio non veritatis quibusdam expedita magnam officiis maiores. Soluta ullam, enim officia voluptas beatae illo!
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </header>
+	</fieldset>
+ 
+     <fieldset>
+		<legend><h2>p:only-of-type</h2></legend>
+		<section>
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	</section>
+      </fieldset>
+
+       <fieldset>
+		<legend><h2>p:only-child</h2></legend>
+		<section class="unico">
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </section>
+      </fieldset>
+
+      <fieldset>
+		<legend><h2>p:nth-child(2)</h2></legend>
+		<section class="segundo">
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </section>
+      </fieldset>
+
+
+      <fieldset>
+		<legend><h2>p:nth-last-child(2)</h2></legend>
+		<section class="atras">
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </section>
+      </fieldset>
+
+        <fieldset>
+		<legend><h2>p:nth-of-type(2)</h2></legend>
+		<section class="hijo">
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </section>
+      </fieldset>
+
+            <fieldset>
+		<legend><h2>p:nth-last-of-type(2)</h2></legend>
+		<section class="otro">
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </section>
+      </fieldset>
+
+                  <fieldset>
+		<legend><h2>p:last-child</h2></legend>
+		<section class="ultimo">
+		    <p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          	<p>
+          		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?
+          	</p>
+          </section>
+      </fieldset>
+
+               <fieldset>
+		<legend><h2>:root</h2></legend>
+		<p>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur at odio quasi consectetur nostrum ea quis eligendi eaque fugiat nesciunt reiciendis dicta libero dolorem incidunt cupiditate et, laborum doloribus repellendus.</h2>
+		</p>
+      </fieldset>
+
+
+         <fieldset>
+		<legend><h2>p:empty</h2></legend>
+		<section class="empty">
+		<p>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur at odio quasi consectetur nostrum ea quis eligendi eaque fugiat nesciunt reiciendis dicta libero dolorem incidunt cupiditate et, laborum doloribus repellendus.</h2>
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi placeat consectetur, laudantium, repudiandae mollitia aut praesentium porro iste beatae ipsum. Quis expedita ipsam aperiam culpa dicta porro maiores vero nulla.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo esse eum, minus eius veritatis delectus eaque, quas repellendus ducimus optio earum qui quasi a mollitia nam nostrum totam unde.
+		</p>
+		</section>
+      </fieldset>
+
+	<fieldset class="nt">
+		<legend><h2>#noticias:target</h2></legend>
+		<a href="#contactos">CONTACTOS</a> |
+		<a href="#noticias">NOTICIAS</a> |
+		<a href="#ayuda">AYUDA</a>
+	</fieldset>
+
+	<fieldset>
+		<legend><h2>input:enabled</h2></legend>
+		<input type="text">
+		<br>
+		<input type="text">
+		<br>
+		<input type=""disabled >
+	</fieldset>
+
+
+	<fieldset>
+		<legend><h2>input:disabled</h2></legend>
+		<input type=""disabled>
+		<br>
+		<input type="text">
+		<br>
+		<input type=""disabled >
+	</fieldset>
+
+		<fieldset class="fin">
+		<legend><h2>input:checked</h2></legend>
+		<label for="">Perros</label>
+		<input class="perros" type="checkbox" checked="checked">
+		<br>
+		<label for="">Gatos</label>
+		<input class="gatos" type="checkbox">
+		<br>
+		<label for="">Peces</label>
+		<input class="peces" type="checkbox" checked="checked">
+	</fieldset>
+
+	<fieldset  class="no">
+		<legend><h2>:not(p)</h2></legend>
+         <h2>jaja</h2>
+         <h3>jaja</h3>
+         <h4>jaja</h4>
+         <p>lorem ipsum dolor</p>
+	</fieldset>
+
+	<fieldset class="color">
+		<legend><h2>::selection</h2></legend>
+		<p class="uno">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est, voluptatibus expedita quibusdam fugiat ipsum. Harum soluta id sunt modi tempora, error nobis aliquid non commodi quae temporibus quos, mollitia?
+		</p>
+		<p class="dos">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium autem commodi nulla veritatis expedita eos est, aliquam earum. Quas repudiandae a quos consequuntur deleniti consectetur esse sint! Cum, officia!
+		</p>
+		<p class="tres">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eos fugiat. Aperiam deleniti numquam placeat voluptatum itaque culpa, rem, velit modi architecto, sunt maxime ullam inventore fugiat optio quos similique.
+		</p>
+	</fieldset>
+</body>
+</html>

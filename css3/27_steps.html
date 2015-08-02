@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>steps</title>
+	<style>
+	  section#steps {
+	  	height: 200px;
+	  	width: 200px;
+	  	margin: 50px auto;
+	  	background: #fff url(imgs/bas.png)no-repeat left center;
+
+	  	-webkit-animation:animstep 1s steps(6) infinite;
+	  }
+	  @-webkit-keyframes animstep {
+	  	100%{background-position: -1200px;}
+	  }
+	</style>
+</head>
+<body>
+	<section id="steps"></section>
+</body>
+</html>

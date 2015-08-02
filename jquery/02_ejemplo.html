@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo Basico jQuery</title>
+	<style>
+	    body { font-family: Tahoma;}
+	    ul#bicis {
+	    	list-style: none;
+
+	    }
+	    ul#bicis li {
+	    	width: 240px;
+	    	background-color: black;
+	    	border: 2px solid black;
+	    	color: white;
+	    	padding: 10px;
+	    	margin: 4px;
+
+	    	-webkit-transition: 0.2s all;
+	    	        transition: 0.2s all;
+	    }
+	    ul#bicis li:hover{
+	    	color: black;
+	    	background-color: white;
+	    	cursor: pointer;
+	    	width: 220px;
+	    }
+	</style>
+</head>
+<body>
+    <h1>Ejemplo Basico jQuery</h1>
+	<ul id="bicis">
+		<li>Santa Cruz</li>
+		<li>Trek</li>
+		<li>Yeti</li>
+		<li>Specialized</li>
+		<li>Scott</li>
+		<li>Cannondale</li>
+		<li>Pivot</li>
+	</ul>
+	<p>Click para Eliminar</p>
+	<br>
+	<button>Eliminar Todos</button>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+	   $(function() {
+	   	$('li').click(function(){
+	   		$(this).remove();
+	   	})
+	   });
+
+  $(function() {
+	   	$('button').click(function(){
+	   		$('li').remove();
+	   	})
+	   });
+	</script>
+</body>
+</html>

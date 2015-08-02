@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	div#car {
+		background:url(http://www.clker.com/cliparts/0/9/S/8/g/D/red-car-md.png);
+		width: 120px;
+		height: 80px;
+		position: relative;
+		background-size: 100%;
+		margin-top: 100px;
+
+		-webkit-transform:rotateY(180deg);
+	}
+</style>
+</head>
+<body>
+	<div id="car"></div>
+	<script>
+        var car = document.getElementById('car');
+        var tiempo = setInterval(animateCar, 100);
+        var poscar = 0;
+        var dircar = 'right';
+
+        function animateCar() {
+        	if (poscar == 800) dircar = 'left';
+        	if (poscar == 0) dircar = 'right';
+
+        	
+        	if (dircar == 'right') {
+        		poscar += 20;
+        	car.style.webkitTransform = 'rotateY(180deg)';
+        		car.style.left = poscar+'px';
+        	} else {
+        		poscar -= 20;
+        		car.style.webkitTransform = 'rotateY(0deg)';
+        		car.style.left = poscar+'px';
+        	}
+        	
+        }
+	</script>
+</body>
+</html>

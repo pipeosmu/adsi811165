@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Border image</title>
+	<style>
+	   section.box {
+	   	height: 400px;
+	   	margin: 50px auto;
+	   	width: 600px;
+	   	border: 25px solid transparent;
+	   	-webkit-border-image:url(imgs/cocas.fw.png) 50 50 round;
+	   	-moz-border-image:url(imgs/cocas.fw.png) 50 50 round;
+	   	-ms-border-image:url(imgs/cocas.fw.png) 50 50 round;
+	   	border-image:url(imgs/cocas.fw.png) 50 50 round;
+
+	   }
+	</style>
+</head>
+<body>
+	<section class="box"></section>
+</body>
+</html>

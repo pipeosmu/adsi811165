@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de Numeros JS</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Metodos de Numeros</legend>
+		Numero <input type="number" id="num1"><strong id="res1"></strong>
+		<br>
+		<br>
+		Numero <input type="number" id="num2"> <input type="number" id="fixed"><strong id="res2"></strong>
+		<br>
+		<br>
+		<br>
+		Numero <input type="number" id="num3">  <input type="number" id="preci"><strong id="res3"></strong>
+		<br>
+        <br>
+        <br>
+		Numero <input type="number" id="num4"><strong id="res4"></strong>
+		<br>
+		<br>
+		<br>
+		Numero <input type="number" id="num5"><strong id="res5"></strong>
+		<br>
+		<br>
+		<br>
+        <button id="cal">Calcular</button>
+	</fieldset>
+	<script>
+            var res1 = document.getElementById('res1');
+            var res2 = document.getElementById('res2');
+            var res3 = document.getElementById('res3');
+            var res4 = document.getElementById('res4');
+            var res5 = document.getElementById('res5');
+            var cal = document.getElementById('cal');
+
+
+	    	 cal.onclick = function(){
+
+                 var num1 = Number(document.getElementById('num1').value);
+                 var num2 = Number(document.getElementById('num2').value);
+                 var num3 = Number(document.getElementById('num3').value);
+                 var fixed = Number(document.getElementById('fixed').value);
+                 var preci = Number(document.getElementById('preci').value);
+                 var num4 = Number(document.getElementById('num4').value);
+                 var num5 = Number(document.getElementById('num5').value); 
+
+                 res1.innerHTML = ""+num1.toString()+"";
+                 res2.innerHTML = num2.toFixed(fixed);
+                 res3.innerHTML = num3.toPrecision(preci);
+                 res4.innerHTML = parseInt(num4);
+                 res5.innerHTML = parseFloat(num5);  
+            }
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intervalos de tiempo (setTimeout) JS</title>
+</head>
+<body>
+	<h1>Intervalos de tiempo (setTimeout) JS</h1>
+	<hr>
+	<section id="mensaje">
+		Mensaje
+	</section>
+
+	<script>
+	     var msj = document.getElementById('mensaje');
+	     var sto = setTimeout(function(){
+	     	msj.innerHTML = "<h2> Pasaron 5 Segundos!</h2>"
+	     },5000);
+	</script>
+</body>
+</html>

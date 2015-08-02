@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de cadena JS</title>
+</head>
+<body>
+	<h1>Metodos de cadena JS</h1>
+	<hr>
+	<button id="btn1">Longitud de Caracteres</button>
+	<button id="btn2">Cortar Cadena (Apple)</button>
+	<button id="btn3">Reemplazar texto (Ibm por ADSI)</button>
+	<button id="btn4">Cambiar Mayusculas</button>
+	<button id="btn5">Cambiar Minusculas</button>
+	<h3 id="resultado"></h3>
+	<script>
+	var texto = "Google, Microsoft, Apple, Ibm"
+	   var resultado = document.getElementById('resultado');
+	   var bt1 = document.getElementById('bt1');
+	   var bt2 = document.getElementById('bt2');
+	   var bt3 = document.getElementById('bt3');
+	   var bt4 = document.getElementById('bt4');
+	   var bt5 = document.getElementById('bt5');
+
+    btn1.onclick = function(){
+         resultado.innerHTML = "La cadena tiene una longitud de: "+texto.length;
+    }
+        btn2.onclick = function(){
+         resultado.innerHTML = "La cadena cortada es: "+texto.substring(19,24);
+    }
+        btn3.onclick = function(){
+         resultado.innerHTML = "La cadena reemplazada es: "+texto.replace('Ibm' , 'ADSI');
+    }
+        btn4.onclick = function(){
+         resultado.innerHTML = "La cadena en mayusculas es: "+texto.toUpperCase();
+    }
+        btn5.onclick = function(){
+         resultado.innerHTML = "La cadena en minusculas es: "+texto.toLowerCase();
+    }
+	</script>
+</body>
+</html>

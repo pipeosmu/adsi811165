@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animacion Parallax</title>
+	<style>
+	   section#contenedor {
+     overflow: hidden;
+	   	margin: 50px auto;
+	   	width: 700px;
+	   	height: 540px;
+	   	-webkit-box-shadow: 0px 0px 12px 4px teal;
+	   	        box-shadow: 0px 0px 12px 4px teal;
+
+	   }
+     article#nubes {
+  width: 1600px;
+  height: 600px;
+  background:transparent url(imgs/nubes.jpg) repeat-x;
+  position: relative;
+
+  -webkit-animation:animnu 14s linear infinite;
+          animation:animnu 14s linear infinite;
+
+} 
+@-webkit-keyframes animnu {
+  0%{left: 0px;}
+  100%{left: -800px;}
+}
+article#pasto{
+  position: relative;
+  width: 2200px;
+  top: -900px;
+  height: 900px;
+  background-position: bottom;
+  background:transparent url(imgs/pasto.png) repeat-x;
+
+  -webkit-animation:animpas 0.5s linear infinite;
+          animation:animpas 0.5s linear infinite;
+
+} 
+@-webkit-keyframes animpas {
+  0%{left: -60px;}
+  100%{left: -800px;}
+}
+article#goku {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: -1200px;
+  left: 100px;
+  background-size: cover;
+  background: transparent url(imgs/goku.gif) no-repeat;
+  }
+  article#avion {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: -1600px;
+  left: 800px;
+  background-size: cover;
+  background: transparent url(imgs/avion.gif) no-repeat;
+  -webkit-animation:anima 7s linear infinite;
+          animation:anima 7s linear infinite;
+
+} 
+@-webkit-keyframes anima {
+  0%{left: 2200px;}
+  100%{left: -800px;}
+}
+	</style>
+
+</head>
+<body>
+	<section id="contenedor">
+     <article id="nubes"></article>
+     <article id="pasto"></article>
+     <article id="goku"></article>
+     <article id="avion"></article>
+	</section>
+</body>
+</html>

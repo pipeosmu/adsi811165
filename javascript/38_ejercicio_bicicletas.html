@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos vectores</title>
+	<style>
+	   html {font-size: 62.5%;}
+	   body {
+	   	background-color: #000;
+	   	color: #d00;
+	   	font: 1.6rem tahoma;
+
+	   }
+	   h1 {
+	   	text-align: center;
+	   }
+	   main {
+	   	margin: 0px auto;
+	   	width: 820px;
+	   }
+	   fieldset {
+	   	border: 2px solid #d00;
+	   	padding: 10px;
+	   	margin: 20px 0px;
+	   	width: 300px;
+	   }
+	   input,button,select {
+	   	-webkit-appearance:none;
+	   	display: block;
+	   	border-radius: 0px;
+	   	border:none;
+	   	padding: 10px;
+	   	margin: 10px 0px;
+	   	width: 360px;
+	   	text-align: center;
+	   }
+	   select,button {
+           width: 380px;
+	   }
+	   button {
+	   	background-color: #d00;
+	   	color: #fff;
+	   }
+	   select {
+	   	border-right: 40px solid #d00;
+	   	border-radius: 6px;
+	   }
+	   section {
+	   	display: inline-block;
+	   	vertical-align: top;
+	   	width: 400px;
+	   }
+	   section.rsection {
+	   	margin-left: 10px;
+	   }
+	   button:hover {
+	   	cursor: pointer;
+	   }
+	   ul#bicis {
+	   	list-style: decimal;
+	   	margin: 0px auto;
+	   	padding: 0px;
+	   	width: 120px;
+	   }
+	   ul#bicis li {
+	   	background: #fff url(imgs/bicic.png)no-repeat center center;
+	   	background-size: contain;
+	   	border: 1px solid #d00;
+	   	height: 100px;
+	   	padding: 4px;
+	   	margin-bottom: 4px;
+	   	text-align: center;
+	   	width: 100px;
+
+	   	-webkit-animation:0.5s animBici 1 ease-in-out;
+	   	animation:0.5s animBici 1 ease-in-out;
+
+	   }
+	   @-webkit-keyframes animBici {
+	   	0% {
+	   		opacity: 0;
+	   		-webkit-transform:scale(0);
+	   	}
+	   	100% {
+	   		opacity: 1;
+	   		-webkit-transform:scale(1);
+	   	}
+	   }
+	</style>
+</head>
+<body>
+	<h1>Metodos Vectores</h1>
+	<main>
+	<section class="lsection">
+		<fieldset>
+		<legend><h4>Agregar Marca (Bicis)</h4></legend>
+		<input type="text" id="marca" placeholder="Ingrese Marca">
+		<select id="apos">
+			<option value="ainicio">Inicio</option>
+			<option value="afinal">Final</option>
+		    <option value="aposicion">Posicion</option>
+		</select>
+		<input type="number" id="agposi" placeholder="Ingrese Posicion">
+		<button id="agregar">Agregar</button>
+
+	</fieldset>
+	<fieldset>
+		<legend><h4>Eliminar Marca (Bicis)</h4></legend>
+		<select id="epos">
+			<option value="einicio">Inicio</option>
+			<option value="efinal">Final</option>
+		    <option value="eposicion">Posicion</option>
+
+		</select>
+		<input type="number" id="elposi" placeholder="Ingrese Posicion">
+		
+		<button id="eliminar">Eliminar</button>
+	</fieldset>
+		</section>
+		<section class="rsection">
+			<fieldset>
+				<legend><h4>Lista de Marcas</h4></legend>
+				<ul id="bicis">
+					
+				</ul>
+			</fieldset>
+		</section>
+	</main>
+	<script>
+	var agregar = document.getElementById('agregar');
+	var eliminar = document.getElementById('eliminar'); 
+	var bicis = document.getElementById('bicis');
+	var aposicion = document.getElementById('aposicion');
+	var eposicion = document.getElementById('eposicion');
+
+	var arrbici = new Array;
+
+	agregar.onclick = function(){
+		var marca = document.getElementById('marca').value;
+		var apos = document.getElementById('apos').value;
+		var agposi = document.getElementById('agposi').value;
+
+        if (marca.length >0) {
+        if (apos == 'ainicio') {
+        	arrbici.unshift(marca);
+        }
+        if (apos == 'afinal') {
+        	arrbici.push(marca);
+        }
+        	if (apos == 'aposicion') {
+             arrbici.splice(agposi,0,marca);
+        	}
+        }
+ 
+        document.getElementById('marca').value = '';
+        mostrarBicis();
+	}
+
+		eliminar.onclick = function(){
+		var epos = document.getElementById('epos').value;
+        var elposi = document.getElementById('elposi').value;
+        if (epos == 'einicio') {
+        	arrbici.shift();
+        }
+        if (epos == 'efinal') {
+        	arrbici.pop();
+        }
+        if (epos == 'eposicion') {
+        	arrbici.splice(elposi,1);
+
+        }
+        mostrarBicis();
+	}
+    
+
+    function mostrarBicis(){
+    	bicis.innerHTML = "";
+    	for(var i = 0; i < arrbici.length; i++){
+    		bicis.innerHTML += "<li>"+arrbici[i]+"</li>";
+    	}
+    }
+	</script>
+
+</body>
+</html>

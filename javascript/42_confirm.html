@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Confirmacion JS</title>
+</head>
+<body>
+	
+	<h1>Confirmacion js</h1>
+	<hr>
+	<h3 id="mensaje"></h3>
+	<script>
+	var msj = document.getElementById('mensaje');
+	   if (confirm('Desea ver la pagina?')){
+         msj.innerHTML = 'Bienvenido a esta pagina';
+	   }
+	   else{
+	   	msj.innerHTML = "Hasta Pronto..."
+	   }
+	</script>
+</body>
+</html>

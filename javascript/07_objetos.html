@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>objetos en js</title>
+</head>
+<body>
+	<h1>objetos en js</h1>
+	<hr>
+	<script>
+	   var pokemon1 = {
+	   	nombre: "snorlax",
+	   	foto: "https://www.google.com.co/search?hl=es&site=imghp&tbm=isch&source=hp&biw=1366&bih=643&q=snorlax&oq=snorlax&gs_l=img.3..0l10.1230.2751.0.3019.7.6.0.1.1.0.202.517.0j2j1.3.0.msedr...0...1ac.1.64.img..3.4.521.Rcc0HkjpAtU#imgrc=SiFE7CkRVS5z8M%253A%3B4eTApvrRLgP0kM%3Bhttp%253A%252F%252Fwww.dltk-kids.com%252Fpokemon%252Fadoptions%252F143.gif%3Bhttp%253A%252F%252Fwww.dltk-kids.com%252Fpokemon%252Fadoptions%252Fsnorlax-p.html%3B453%3B362"
+	   	tipo: "Tierra",
+	   	ataque: 60,
+	   	defensa: 90,
+	   	habilidad: 10,
+	   	salud: 100
+	   };
+	   	   var pokemon2 = {
+	   	nombre: "pikachu",
+	   	tipo: "rayo",
+	   	foto: "https://www.google.com.co/search?hl=es&site=imghp&tbm=isch&source=hp&biw=1366&bih=643&q=snorlax&oq=snorlax&gs_l=img.3..0l10.1230.2751.0.3019.7.6.0.1.1.0.202.517.0j2j1.3.0.msedr...0...1ac.1.64.img..3.4.521.Rcc0HkjpAtU#hl=es&tbm=isch&q=picachu&imgrc=rTROC_5JVcNJtM%253A%3Bwznoe09L6TCMOM%3Bhttp%253A%252F%252F1.bp.blogspot.com%252F-SxKEkTpb25g%252FTdWgz7WS_ZI%252FAAAAAAAAACU%252FLa7XVHBVTxQ%252Fs1600%252FPIKACHU.png%3Bhttp%253A%252F%252Fwww.smwcentral.net%252F%253Fp%253Dprofile%2526id%253D21382%3B900%3B1290"
+	   	ataque: 40,
+	   	defensa: 20,
+	   	habilidad: 80,
+	   	salud: 100
+	   };
+
+	   var resultado = ((pokemon2.salud + pokemon2.defensa) - pokemon1.ataque);
+
+       document.write("Despues del primer ataque del pokemon 1 \
+       	                  <img src='"+pokemon1.foto+"'>"+pokemon1.nombre+"\
+   	               El pokemon 2 "+pokemon2.nombre+"<img src='"+pokemon1.foto+"'>"+pokemon2.nombre+"\
+   	                tiene salud de: \
+   	               "+resultado);
+	</script>
+</body>
+</html>

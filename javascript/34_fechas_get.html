@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de fechas JS</title>
+	<style>
+	    button {
+	    	margin: 4px;
+	    	width: 140px;
+	    	border-radius: 10px;
+	    }
+	    button:hover {
+	    	cursor: pointer;
+	    }
+	</style>
+</head>
+<body>
+	<h1>Metodos de fechas JS</h1>
+	<hr>
+	<button id="getFecha">Mostrar Fecha</button>
+	<output id="showFecha"></output>
+    <br>
+	<button id="getSegundos">Mostrar Segundos</button>
+	<output id="showSegundos"></output>
+    <br>
+	<button id="getHoras">Mostrar Horas</button>
+	<output id="showHoras"></output>
+    <br>
+	<button id="getDia">Mostrar Dia</button>
+	<output id="showDia"></output>
+    <br>
+	<button id="getMes">Mostrar Mes</button>
+	<output id="showMes"></output>
+    <br>
+	<button id="getAno">Mostrar Año</button>
+	<output id="showAno"></output>
+</body>
+<script>
+	var getFecha = document.getElementById('getFecha');
+	var getSegundos = document.getElementById('getSegundos');
+	var getHoras = document.getElementById('getHoras');
+	var getDia = document.getElementById('getDia');
+	var getMes = document.getElementById('getMes');
+	var getAno = document.getElementById('getAno');
+
+	var showFecha = document.getElementById('showFecha');
+	var showSegundos = document.getElementById('showSegundos');
+	var showHoras = document.getElementById('showHoras');
+	var showDia = document.getElementById('showDia');
+	var showMes = document.getElementById('showMes');
+	var showAno = document.getElementById('showAno');
+
+
+	getFecha.onclick = function(){
+		var f = new Date;
+		showFecha.innerHTML = f.getDate();
+	}
+		getSegundos.onclick = function(){
+		var f = new Date;
+		showSegundos.innerHTML = f.getSeconds();
+	}
+		getHoras.onclick = function(){
+		var f = new Date;
+		showHoras.innerHTML = f.getHours();
+	}
+	getDia.onclick = function(){
+		var f = new Date;
+		showDia.innerHTML = f.getDay();
+	}
+			getMes.onclick = function(){
+		var f = new Date;
+		showMes.innerHTML = f.getMonth()+1;
+	}
+			getAno.onclick = function(){
+		var f = new Date;
+		showAno.innerHTML = f.getFullYear();
+	}
+</script>
+</html>

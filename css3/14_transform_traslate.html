@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform: (translate) CSS3</title>
+	<style>
+	   section {
+	   	width: 800px;
+	   	color: white;
+	   	height: 400px;
+	   	background-color: #444;
+	   	margin: 10px auto;
+	   }
+	   div.element {
+	   	background-color: #ff0;
+	   	width: 200px;
+	   	height: 40px;
+	   }
+	   section#box1 div.element {
+	   
+	   	-webkit-transform: translate(200px, 180px);
+    	        transform: translate(200px, 180px);
+    }
+    	   section#box2 div.element {
+	   
+	   	-webkit-transform: translateX(300px);
+    	        transform: translateX(300px);
+    }
+        	   section#box3 div.element {
+	   
+	   	-webkit-transform: translateY(90px);
+    	        transform: translateY(90px);
+    }
+	</style>
+</head>
+<body>
+	<h1>Transform: (translate) CSS3</h1>
+	<hr>
+	<section id="box1">
+	<h4>transform: translate(200px, 180px)</h4>
+		<div class="element"></div>
+	</section>
+		<section id="box2">
+	<h4>transform: translateX(300px)</h4>
+
+		<div class="element"></div>
+	</section>
+		<section id="box3">
+	<h4>transform: translateY(90px)</h4>
+
+		<div class="element"></div>
+	</section>
+</body>
+</html>

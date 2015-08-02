@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Z-index</title>
+	<style>
+	   article {
+	   	width: 230px;
+	   	height: 130px;
+	   	display: inline-block;
+	   	color: #fff;
+
+	   }
+	   .caja1 {
+	   	background-color: #484848;
+	   		   	border: 2px solid #484848;
+	   	z-index: 1;
+	   }
+	   .caja2 {
+	   	background-color: #6E6E6E;
+	   	position: relative;
+	   	z-index: 2;
+	   		   	border: 2px solid #6E6E6E ;
+
+	   	
+	   	right: 110px;
+	   	top: 60px;
+	   }
+	   .caja3 {
+	   	background-color: #969696;
+	   	position: relative;
+	   	right: 220px;
+	   	top: 120px;
+	   	z-index: 3;
+	   		   	border: 2px solid #969696;
+	   }
+	   h3 {
+         font-family: verdana;
+         text-align: center;
+         line-height: 1em;
+         font-size: 40px;
+	   }
+	</style>
+</head>
+<body>
+	<h1>Z-index</h1>
+	<hr>
+	<article class="caja1"><h3>1</h3></article>
+	<article class="caja2"><h3>2</h3></article>
+	<article class="caja3"><h3>3</h3></article>
+</body>
+</html>

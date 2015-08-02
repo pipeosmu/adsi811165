@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Posicionamiento flotante</title>
+	<style>
+	   section {
+	   	width: 400px;
+	   	border: 2px solid black;
+	   	padding: 10px;
+	   	margin-bottom: 10px;
+	   	text-align: center;
+
+	   }
+	   article {
+	   	margin: 10px;
+	   	border: solid black;
+	   	width: 160px;
+	   	height: 70px;
+	    line-height: 6em;
+
+	   }
+	   article#caja1 {
+	   	float: right;
+	   }
+	</style>
+</head>
+<body>
+	<h1>Posicionamiento flotante</h1>
+	<section id="cajapadre">
+		<article id="caja">caja1</article>
+		<article id="caja2">caja2</article>
+		<article id="caja3">caja3</article>
+	</section>
+	<br>
+	<section id="cajapadre">
+		<article id="caja1">caja1</article>
+		<article id="caja2">caja2</article>
+		<article id="caja3">caja3</article>
+	</section>
+</body>
+</html>

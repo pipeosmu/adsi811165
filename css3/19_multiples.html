@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform: (multiples) CSS3</title>
+	<style>
+	   section {
+	   	width: 800px;
+	   	color: white;
+	   	height: 400px;
+	   	background-color: #444;
+	   	margin: 10px auto;
+	   }
+	   div.element {
+	   	background-color: #ff0;
+	   	color:black; 
+	   	width: 200px;
+	   	height: 40px;
+	   	position: relative;
+	   	top: 100px;
+	   	left: 200px;
+	   }
+	   section#box1 div.element {
+	   
+	   	-webkit-transform: translate(50px, 50px) rotate(90deg) scale(1.5) skew(10deg, 10deg);
+    	        transform: translate(50px, 50px) rotate(90deg) scale(1.5) skew(10deg, 10deg);
+    }
+
+	</style>
+</head>
+<body>
+	<h1>Transform: (multiples) CSS3</h1>
+	<hr>
+	<section id="box1">
+	<h4>transform: translate(50px, 50px) rotate(90deg) scale(1.5) skew(10deg, 10deg);</h4>
+		<div class="element">Element</div>
+	</section>
+</body>
+</html>

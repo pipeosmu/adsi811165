@@ -1,0 +1,66 @@
+section#animation {
+	margin: 50px auto;
+	width: 800px;
+	height: 300px;
+	
+	
+
+	-webkit-box-shadow: 0px 0px 12px 4px black;
+	        box-shadow: 0px 0px 12px 4px black;
+}
+article {
+	position: relative;
+}
+article#bg{
+	width: 1600px;
+	height: 300px;
+	background:transparent url(../imgs/bg.png) repeat-x;
+
+	-webkit-animation:animBg 10s linear infinite;
+	        animation:animBg 10s linear infinite;
+
+} 
+@-webkit-keyframes animBg {
+	0%{left: 0px;}
+	100%{left: -800px;}
+}
+article#mountains{
+	width: 1600px;
+	top: -300px;
+	height: 300px;
+	background:transparent url(../imgs/mountains.png) repeat-x;
+
+	-webkit-animation:animBg 10s linear infinite;
+	        animation:animBg 10s linear infinite;
+
+} 
+article#path{
+	width: 1600px;
+	top: -600px;
+	height: 300px;
+	background:transparent url(../imgs/path.png) repeat-x;
+
+	-webkit-animation:animBg 3s linear infinite;
+	        animation:animBg 3s linear infinite;
+
+} 
+article#car{
+	width: 154px;
+	top: -664px;
+	left: 20px;
+	height: 59px;
+	background:transparent url(../imgs/car.png)no-repeat;
+
+	-webkit-animation:animCar 0.5s ease-in-out infinite;
+	        animation:animCar 0.5s ease-in-out infinite;
+
+}
+@-webkit-keyframes animBg {
+	0%{left: 0px;}
+	100%{left: -800px;} 
+}
+
+	@-webkit-keyframes animCar {
+	0%, 100%{top: -664px;}
+	50%{top: -668px;}
+}

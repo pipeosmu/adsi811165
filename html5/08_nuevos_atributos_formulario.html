@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Atributos formulario (html 5)</title>
+</head>
+<body>
+	<h1>Atributos formulario (html 5)</h1>
+	<hr>
+	<form action="" autocomplete="on" novalidate>
+		<fieldset>
+			<legend><h2>autocompletar/no validar</h2></legend>
+			<label for="nombre">Nombre</label>
+			<input type="text" id="nombre" required>
+			<input type="submit" value="enviar">
+		</fieldset>
+	</form>
+
+	<form action="" autocomplete="off">
+		<fieldset>
+			<legend><h2>autocompletar/validar</h2></legend>
+			<label for="nombre">Nombre</label>
+			<input type="text" id="nombre" required>
+			<input type="submit" value="enviar">
+		</fieldset>
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectores</title>
+</head>
+<body>
+<table id="tbl">
+   <tr>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	   <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   <tr>
+   	<td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   	  <td class="bordes relleno">x</td>
+   </tr>
+   </table>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+        $(document).ready(function() {
+        	$('table').css({
+        		'border':'1px solid gray',
+        		'border-collapse':'collapse',
+        		'width':'400px',
+        		'text-align':'center',
+        	})
+        	$('#tbl').css('margin','0 auto');
+        	$('.relleno').css('padding','20px');
+        	$('.bordes').css('border','1px solid gray');
+        	$('tr:first').css('color','red');
+        	$('tr:last').css('color','green');
+        	$('tr:even').css('background-color','gray');
+        	$('tr:odd').css('background-color','lime');
+        });
+	</script>
+
+</body>
+</html>

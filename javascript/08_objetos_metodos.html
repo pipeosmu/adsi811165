@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos (Atributos y Metodos) JS</title>
+	<style>
+	  html {font-size: 62.5%;}
+	  body {
+	  	background-color: #356346;
+	  	font: 1.4rem sans-serif;
+	  }
+	  fieldset {
+	  	background-color: #50966a;
+	  	border: 4px solid #182d1f;
+	  	margin: 20px auto;
+	  	padding: 10px;
+	  	width: 180px;
+	  }
+	  legend {
+	  	color: #fff;
+	  	font-size: 1.6rem;
+	  	font-weight: bolder;
+	  	text-align: center;
+	  }
+	  input,
+	  select,
+	  button {
+	  	display: block;
+	  	padding: 4px;
+	  	width: 180px;
+	  	font-size: 1.4rem;
+	  	margin-bottom: 4px;
+	  	border: none;
+	  	outline: none;
+	  	-webkit-appearance:none;
+	  	-webkit-box-shadow:-2px -2px 4px #356346 inset,
+	  	                     0px 0px 4px #fff;
+	  	border-radius: 4px;
+	  	border: 2px solid #356346;
+	  }
+	  select,
+	  button {
+	  	width: 192px;
+	  }
+	  table {
+	  	background-color: #50966a;
+	  	border: 4px solid #182d1f;
+	  	border-collapse: collapse;
+	  	margin: 10px auto;
+	  	width: 600px;
+	  }
+	  th {
+	  	background-color: #182d1f;
+	  	color: #fff;
+
+	  }
+	  td {
+	  	border:1px solid #fff;
+	  	background-color: #50966a;
+	  	text-align: center;
+	  }
+	  table, th, td {
+	  	border:1px solid #fff;
+	  	padding: 4px;
+	  }
+	</style>
+</head>
+<body>
+	<h1>Objetos (Atributos y Metodos) JS</h1>
+	<hr>
+	<fieldset>
+		<legend>Adicionar Pokemon</legend>
+		<input type="text" id="nombre" placeholder="Nombre Pokemon">
+		<select id="tipo">
+			<option value="aire">Aire</option>
+			<option value="agua">Agua</option>
+			<option value="electrico">Electrico</option>
+			<option value="fuego">Fuego</option>
+			<option value="tierra" selected>Tierra</option>           
+		</select>
+		<input type="text" id="foto" placeholder="ruta foto">
+        <input type="number" id="ataque" min='1' max='100' placeholder="Ataque">
+        <input type="number" id="defensa" min='1' max='100' placeholder="Defensa">
+        <input type="number" id="habilidad" min='1' max='100' placeholder="Habilidad">
+        <input type="hidden" id="salud" value="100">
+        <button id="adicionar">Adicionar</button>
+	</fieldset>
+	<table id="tabla">
+	<thead> 
+        <tr>
+		<th colspan="7">Lista de Pokemons</th>
+		</tr>
+		<tr>
+			<th>Nombre</th>
+			<th>Tipo</th>
+			<th>Foto</th>
+			<th>Ataque</th>
+			<th>Defensa</th>
+			<th>Habilidad</th>
+			<th>Salud</th>
+		</tr>
+	</thead>
+	<tbody id="lstpokemons">
+	</tbody>
+	</table>
+	<script>
+	  var contenido = '';
+	  var lstpokemons = document.getElementById('lstpokemons');
+	  var tabla = document.getElementById('tabla');
+	  tabla.style.display = 'none';
+	  var pokemon = {
+	  	//Atributos
+	  	  nombre:    'null',
+	  	  tipo:      'null',
+	  	  foto:    'null',
+	  	  ataque:    'null',
+	  	  defensa:   'null',
+	  	  habilidad: 'null',
+	  	  salud:     'null',
+	   //metodos
+	   iniciarPokemon: function(n, t, f, a, d, h, s) {
+          this.nombre    = n;
+          this.tipo      = t;
+          this.foto     = f;
+          this.ataque    = a;
+          this.defensa   = d;
+          this.habilidad = h;
+          this.salud     = s;
+
+	   },
+	  mostrarPokemon: function() {
+          /* console.log('nombre:'   +this.nombre);
+          console.log('tipo:'     +this.tipo);
+          console.log('ataque:'   +this.ataque);
+          console.log('habilidad:'+this.defensa);
+          console.log('habilidad:'+this.habilidad);
+          console.log('salud:'    +this.salud);*/
+
+          contenido += '<tr>';
+          contenido += '<td>'+this.nombre+'</td>';
+          contenido += '<td>'+this.tipo+'</td>';
+          contenido += '<td><img src="'+this.foto+'" width="30"></td>';
+          contenido += '<td>'+this.ataque+'</td>';
+          contenido += '<td>'+this.defensa+'</td>';
+          contenido += '<td>'+this.habilidad+'</td>';
+          contenido += '<td>'+this.salud+'</td>';
+          contenido += '</tr>';
+          return contenido;
+
+
+	   }
+	  };
+	  var adicionar = document.getElementById('adicionar');
+	  adicionar.onclick = function() {
+	  	var n = document.getElementById('nombre').value;
+	  	var t = document.getElementById('tipo').value;
+	  	var f = document.getElementById('foto').value;
+	  	var a = document.getElementById('ataque').value;
+	  	var d = document.getElementById('defensa').value;
+	  	var h = document.getElementById('habilidad').value;
+	  	var s = document.getElementById('salud').value;
+
+	  	pokemon.iniciarPokemon(n, t, f, a, d, h, s);
+	  	tabla.style.display = 'table';
+
+	  	document.getElementById('nombre').value ='';
+	  	document.getElementById('foto').value ='';
+	  	document.getElementById('ataque').value ='';
+	  	document.getElementById('defensa').value ='';
+	  	document.getElementById('habilidad').value ='';
+
+	  	lstpokemons.innerHTML = pokemon.mostrarPokemon();
+
+	  }
+	</script>
+</body>
+</html>

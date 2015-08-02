@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform: (rotate) CSS3</title>
+	<style>
+	   section {
+	   	width: 800px;
+	   	color: white;
+	   	height: 400px;
+	   	background-color: #444;
+	   	margin: 10px auto;
+	   }
+	   div.element {
+	   	background-color: #ff0;
+	   	color:black; 
+	   	width: 200px;
+	   	height: 40px;
+	   	position: relative;
+	   	top: 100px;
+	   	left: 200px;
+	   }
+	   section#box1 div.element {
+	   
+	   	-webkit-transform: rotate(90deg);
+    	        transform: rotate(90deg);
+    }
+    	   section#box2 div.element {
+	   
+	   	-webkit-transform: rotate(-40deg);
+    	        transform: rotate(-40deg);
+    }
+        	   section#box3 div.element {
+	   
+	   	-webkit-transform: rotate(180deg);
+    	        transform: rotate(180deg);
+    }
+            	   section#box4 div.element {
+	   
+	   	-webkit-transform: rotateX(80deg);
+    	        transform: rotateX(80deg);
+    }
+            	   section#box5 div.element {
+	   
+	   	-webkit-transform: rotateY(80deg);
+    	        transform: rotateY(80deg);
+    }
+	</style>
+</head>
+<body>
+	<h1>Transform: (rotate) CSS3</h1>
+	<hr>
+	<section id="box1">
+	<h4>transform: rotate(90deg;</h4>
+		<div class="element">Element</div>
+	</section>
+		<section id="box2">
+	<h4>transform: rotate(-40deg);</h4>
+
+		<div class="element">Element</div>
+	</section>
+		<section id="box3">
+	<h4>transform: rotate(180deg);</h4>
+
+		<div class="element">Element</div>	
+	</section>
+			<section id="box4">
+	<h4>transform: rotateX(45deg);</h4>
+
+		<div class="element">Element</div>
+	</section>
+			<section id="box5">
+	<h4>transform: rotateY(45deg);</h4>
+
+		<div class="element">Element</div>
+	</section>
+</body>
+</html>

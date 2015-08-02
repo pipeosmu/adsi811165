@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tipos de Variables JS</title>
+</head>
+<body>
+	<h1>Tipos de Variables JS</h1>
+	<hr>
+	<ul id="resultados"></ul>
+	<script>
+	   var edad = 22;
+	   var nombre = "Javael";
+	   var estado = false;
+       var voto = (edad > 18);
+
+	   var vehiculos = new Array('BMW','Mini','Volkswagen');
+
+	   var resultados = document.getElementById('resultados');
+	   resultados.innerHTML = "<li>Edad: "+edad+"</li>";
+	   resultados.innerHTML += "<li>Nombre: "+nombre+"</li>";
+	   resultados.innerHTML += "<li>Estado: "+estado+"</li>";
+	   resultados.innerHTML += "<li>Voto: "+voto+"</li>";
+	   resultados.innerHTML += "<li>Vehiculos: "+vehiculos+"</li>";
+
+	</script>
+</html>
